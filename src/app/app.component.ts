@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'PrimeraApp';
+  edad1:number;
+  edad2:number;
+  sumaEdades:number;
+  promedioEdades:number;
+
+  constructor(){
+    this.edad1=0;
+    this.edad2=0;
+    this.sumaEdades=0;
+    this.promedioEdades=0;
+  }
+
+  SumaPromedio = () =>{
+    this.sumaEdades = this.edad1 + this.edad2;
+    this.promedioEdades= this.sumaEdades/2;
+  }
+  CleanValues = ()=>{
+    this.edad1=0
+    this.edad2=0
+    this.sumaEdades=0
+    this.promedioEdades=0
+  }
 }
+
+
